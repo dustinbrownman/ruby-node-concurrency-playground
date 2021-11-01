@@ -1,3 +1,3 @@
-# Sinatra playground
+# Ruby - Node concurrency playground
 
-It's just a place for me to spin up quick endpoints for me to play around with. Nothing really interesting here 😄
+Just a place for me to explore and test how concurrency differs for Ruby vs Node.
