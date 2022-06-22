@@ -1,0 +1,55 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello, Turbo</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+  <script type="module">
+    import * as Turbo from 'https://cdn.skypack.dev/@hotwired/turbo';
+  </script>
+
+  <style>
+    .loading:after {
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: bottom;
+      -webkit-animation: ellipsis steps(4,end) 900ms infinite;
+      animation: ellipsis steps(4,end) 900ms infinite;
+      content: "\2026"; /* ascii code for the ellipsis character */
+      width: 0px;
+    }
+
+    @keyframes ellipsis {
+      to {
+        width: 20px;
+      }
+    }
+
+    @-webkit-keyframes ellipsis {
+      to {
+        width: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hello, Turbo</h1>
+    <p>This is a simple example of using Turbo Frames to render a page with multiple parts.</p>
+  </header>
+
+  <main>
+    <%= erb :partial1 %>
+
+    <details>
+      <summary>Click here to view <code>partial2</code></summary>
+
+      <%= erb :partial2 %>
+    </details>
+  </main>
+
+  <footer>
+    &copy; 2022
+  </footer>
+</body>
+</html>
